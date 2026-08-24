@@ -16,7 +16,7 @@ export function OpeningHours() {
   return <div className="hours-list" aria-label="Clinic opening hours">
     {clinic.hours.map(item => <div className={item.dayIndex === today ? "today" : ""} key={item.day}>
       <span>{item.day}<small>{item.dayIndex === today ? "Today" : ""}</small></span>
-      <strong>{item.periods.length ? item.periods.join(", ") : "Closed"}</strong>
+      <strong className="hours-periods">{item.periods.length ? item.periods.map(period => <span key={period}>{period}</span>) : <span>Closed</span>}</strong>
     </div>)}
     <p>Times shown in Singapore time (SGT). Hours may vary on public holidays.</p>
   </div>;

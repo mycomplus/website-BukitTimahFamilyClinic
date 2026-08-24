@@ -161,6 +161,8 @@ h3 { color:var(--navy); }
 .hours-list>div>span { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:650; }
 .hours-list small { padding:3px 6px; border-radius:5px; color:var(--teal-dark); background:#fff; font-size:9px; letter-spacing:.04em; }
 .hours-list strong { color:inherit; font-size:13px; text-align:right; }
+.hours-periods { display:grid; gap:4px; }
+.hours-periods span { display:block; white-space:nowrap; }
 .hours-list>p { margin:14px 0 0; color:var(--muted); font-size:11px; line-height:1.55; }
 .map-embed { min-height:620px; overflow:hidden; display:flex; flex-direction:column; border:1px solid var(--border); border-radius:24px; background:var(--soft-teal); }
 .map-embed iframe { width:100%; min-height:570px; flex:1; border:0; }
