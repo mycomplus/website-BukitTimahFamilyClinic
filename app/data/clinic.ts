@@ -15,12 +15,12 @@ export const clinic = {
   googleMapsEmbedUrl: "https://www.google.com/maps?q=897%20Bukit%20Timah%20Road%2C%20Singapore%20589617&output=embed",
   ahmUrl: "https://ahm.sg/",
   hours: [
-    { day: "Monday", shortDay: "Mon", dayIndex: 1, periods: ["08:30 – 12:15", "14:00 – 16:45"] },
-    { day: "Tuesday", shortDay: "Tue", dayIndex: 2, periods: ["08:30 – 12:15", "14:00 – 16:45"] },
-    { day: "Wednesday", shortDay: "Wed", dayIndex: 3, periods: [] },
-    { day: "Thursday", shortDay: "Thu", dayIndex: 4, periods: ["08:30 – 12:15", "14:00 – 16:45"] },
-    { day: "Friday", shortDay: "Fri", dayIndex: 5, periods: ["08:30 – 12:15", "14:00 – 16:45"] },
-    { day: "Saturday", shortDay: "Sat", dayIndex: 6, periods: ["08:30 – 12:15"] },
+    { day: "Monday", shortDay: "Mon", dayIndex: 1, periods: ["08:30 A.M. – 12:30 P.M.", "02:00 P.M. – 04:30 P.M."] },
+    { day: "Tuesday", shortDay: "Tue", dayIndex: 2, periods: ["08:30 A.M. – 12:30 P.M.", "02:00 P.M. – 04:30 P.M."] },
+    { day: "Wednesday", shortDay: "Wed", dayIndex: 3, periods: ["08:30 A.M. – 12:30 P.M.", "02:00 P.M. – 04:30 P.M."] },
+    { day: "Thursday", shortDay: "Thu", dayIndex: 4, periods: ["08:30 A.M. – 12:30 P.M.", "02:00 P.M. – 04:30 P.M."] },
+    { day: "Friday", shortDay: "Fri", dayIndex: 5, periods: ["08:30 A.M. – 12:30 P.M.", "02:00 P.M. – 04:30 P.M."] },
+    { day: "Saturday", shortDay: "Sat", dayIndex: 6, periods: ["08:30 A.M. – 12:30 P.M."] },
     { day: "Sunday", shortDay: "Sun", dayIndex: 0, periods: [] },
   ],
   features: {
