@@ -2,7 +2,7 @@ import { ContactCTA } from "./components/ContactCTA";
 import { SiteShell } from "./components/SiteShell";
 import { clinic } from "./data/clinic";
 import { faq } from "./data/faq";
-import { services } from "./data/services";
+import { featuredServices } from "./data/services";
 
 const principles = [
   ["◎", "Attentive consultations", "We take time to understand your concerns and explain the next steps clearly."],
@@ -22,7 +22,7 @@ export default function Home() {
 
     <section className="section" id="about"><div className="container split-intro"><div><p className="eyebrow">About our clinic</p><h2>Healthcare built around people.</h2></div><div><p>At Bukit Timah Family Clinic &amp; Surgery, we believe good primary care begins with understanding the person behind every consultation. Our clinic supports individuals and families through everyday health concerns, preventive care and ongoing health management.</p><p>Our goal is to provide care that is clear, thoughtful and personal — helping patients understand their health and make informed decisions with confidence.</p><a className="text-link" href="/about">About our clinic →</a></div></div></section>
 
-    <section className="section services-section" id="services"><div className="container"><div className="section-head"><div><p className="eyebrow">Our services</p><h2>Care for everyday health needs</h2></div><p>From everyday consultations to preventive healthcare and ongoing health management, our clinic supports patients across different stages of life.</p></div><div className="service-grid">{services.slice(0,6).map(service => <article className="service-card" key={service.id}><span className="service-icon">{service.icon}</span><h3>{service.title}</h3><p>{service.description}</p><a href="/services">Learn more →</a></article>)}</div><div className="center-action"><a className="button button-secondary" href="/services">View all services</a></div><p className="content-note">Service availability is subject to confirmation with the clinic and clinical assessment where applicable.</p></div></section>
+    <section className="section services-section" id="services"><div className="container"><div className="section-head"><div><p className="eyebrow">Our services</p><h2>Care for everyday health needs</h2></div><p>From everyday consultations to preventive healthcare and ongoing health management, our clinic supports patients across different stages of life.</p></div><div className="service-grid">{featuredServices.map(service => <article className="service-card" key={service.id}><span className="service-icon">{service.icon}</span><h3>{service.title}</h3><p>{service.description}</p><a href="/services">Explore services →</a></article>)}</div><div className="center-action"><a className="button button-secondary" href="/services">View all 49 services</a></div><p className="content-note">Service availability is subject to clinical assessment. Please contact the clinic for current availability and preparation instructions.</p></div></section>
 
     <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">Our approach</p><h2>Care that feels personal</h2></div><p>A calm, clear approach to primary care that supports you beyond a single consultation.</p></div><div className="principle-grid">{principles.map(([icon,title,copy]) => <article key={title}><span>{icon}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></div></section>
 

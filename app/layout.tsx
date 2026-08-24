@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import { clinic } from "./data/clinic";
+import { allServices } from "./data/services";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -25,6 +26,7 @@ const clinicSchema = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Thursday", "Friday"], opens: "14:00", closes: "16:45" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "08:30", closes: "12:15" },
   ],
+  availableService: allServices.map(name => ({ "@type": "MedicalProcedure", name })),
 };
 
 export const metadata: Metadata = {
