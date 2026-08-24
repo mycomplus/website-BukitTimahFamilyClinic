@@ -8,7 +8,7 @@ const links = [["Home", "/"], ["About Us", "/about"], ["Our Doctors", "/doctors"
 export function Header() {
   const [open, setOpen] = useState(false);
   return <>
-    <div className="utility"><div className="container utility-inner"><span>⌖ Bukit Timah, Singapore</span><span>☎ {clinic.phone}</span><span>◷ Clinic hours available by phone</span></div></div>
+    <div className="utility"><div className="container utility-inner"><a href={clinic.googleMapsUrl} target="_blank" rel="noreferrer">⌖ {clinic.fullAddress}</a><span>☎ {clinic.phone}</span><a href="/contact#hours">◷ View clinic hours</a></div></div>
     <header className="site-header">
       <div className="nav-wrap">
         <a href="/" className="brand" aria-label={`${clinic.name} home`}><img src="/brand/clinic-logo.png" alt={clinic.name} /></a>

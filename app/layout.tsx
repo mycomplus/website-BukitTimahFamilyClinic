@@ -1,11 +1,31 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import { clinic } from "./data/clinic";
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
 });
+
+const clinicSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  name: clinic.name,
+  url: "https://bukit-timah-family-clinic.mycom-2764.chatgpt.site",
+  telephone: clinic.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: clinic.address.line1,
+    postalCode: clinic.address.postalCode,
+    addressCountry: "SG",
+  },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Thursday", "Friday"], opens: "08:30", closes: "12:15" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Thursday", "Friday"], opens: "14:00", closes: "16:45" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "08:30", closes: "12:15" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bukit-timah-family-clinic.mycom-2764.chatgpt.site"),
@@ -37,7 +57,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} antialiased`}>{children}</body>
+      <body className={`${manrope.variable} antialiased`}>
+        {children}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }} />
+      </body>
     </html>
   );
 }
