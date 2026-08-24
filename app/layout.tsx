@@ -8,6 +8,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bukit-timah-family-clinic.mycom-2764.chatgpt.site"),
   title: "Bukit Timah Family Clinic & Surgery | Family Clinic Singapore",
   description:
     "Bukit Timah Family Clinic & Surgery provides primary healthcare for individuals and families in the Bukit Timah community.",
