@@ -18,6 +18,5 @@ export function OpeningHours() {
       <span>{item.day}<small>{item.dayIndex === today ? "Today" : ""}</small></span>
       <strong className="hours-periods">{item.periods.length ? item.periods.map(period => <span key={period}>{period}</span>) : <span>Closed</span>}</strong>
     </div>)}
-    <p>Times shown in Singapore time (SGT). Hours may vary on public holidays.</p>
   </div>;
 }
