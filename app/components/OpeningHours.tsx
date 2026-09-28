@@ -18,5 +18,6 @@ export function OpeningHours() {
       <span>{item.day}<small>{item.dayIndex === today ? "Today" : ""}</small></span>
       <strong className="hours-periods">{item.periods.length ? item.periods.map(period => <span key={period}>{period}</span>) : <span>Closed</span>}</strong>
     </div>)}
+    <p>We’ll be closed on public holidays, so please check the schedule in advance.</p>
   </div>;
 }
